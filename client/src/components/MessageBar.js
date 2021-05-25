@@ -5,7 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
     messageBar: {
         alignSelf: 'flex-end',
-        width: '100%'
+        width: '100%',
+        display: 'flex',
+        flexWrap: 'no-wrap',
+        margin: '2rem'
     },
 });
 
@@ -14,7 +17,7 @@ const MessageBar = () => {
     return (
         <div className={classes.messageBar}>
             <TextField variant="filled" fullWidth/>
-            <Button>Send</Button>
+            <Button variant="contained" color="primary">Send</Button>
         </div>
     );
 };
